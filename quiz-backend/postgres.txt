@@ -1,0 +1,24 @@
+psql -U username -d dbname  // psql'e bağlan. Kullanıcı ve veritabanı aynı anda.
+                            // psql komutu ile birlikte -d kullanılır.
+
+\c quizapp              // quizapp veritabanına bağlan. psql içindeyken \c kullanılır
+
+\dt                     // veritabanındaki tüm tabloları listele.
+
+\l                      // mevcut veritabanlarını listele.
+
+\du                     // kullanıcıları ve rollerini görüntüler.
+
+\d tablename            // veritabanındaki tüm tabloları listeler.
+
+\d+ tablename           // tablo hakkında detaylı bilgiler verir.
+
+\s                      // geçmiş sorguları gösterir.
+
+\s /path/to/file.sql    // geçmiş sorguları dosyaya kaydeder.
+
+\i /path/to/file.sql    // dosyadaki SQL komutlarını çalıştırır.
+
+\h SELECT               // SQL komutları hakkında bilgi almak için kullanılır.
+
+\q                      // oturumu sonlandırır.

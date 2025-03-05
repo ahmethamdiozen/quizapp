@@ -19,7 +19,7 @@ const createQuestion = async (req, res) => {
     const { question_text, choices, correct_answer } = req.body;
   
     if (!quizId) {
-      return res.status(400).json({ error: "Quiz ID is required" });  // Quiz ID olmaması durumunda hata döndürmek için ekledim
+      return res.status(400).json({ error: "Quiz ID is required" });  // Quiz ID olmaması durumunda hata döndürmek için
     }
   
     try {
@@ -34,7 +34,6 @@ const createQuestion = async (req, res) => {
     }
   };
   
-
 
 // Soruyu güncelle
 const updateQuestion = async (req, res) => {

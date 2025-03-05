@@ -11,6 +11,19 @@ const getUsers = async (req, res) => {
   }
 };
 
+const getUserById = async (req, res) => {
+  const { id } = req.params;
+  try {
+    const result = await client.query('SELECT * FROM users WHERE id = $1',
+      [id]
+    );
+    res.json(result.rows);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send("Veritabanı hatası");
+  }
+}
+
 // Yeni Kullanıcı Ekle
 const createUser = async (req, res) => {
   const { username, email, password } = req.body;
@@ -58,8 +71,9 @@ const deleteUser = async (req, res) => {
 };
 
 module.exports = { 
-  getUsers, 
+  getUsers,
+  getUserById,
   createUser, 
   updateUser, 
-  deleteUser 
+  deleteUser
 }

@@ -1,9 +1,12 @@
 const express = require('express');
 const router = express.Router();
-const { getUsers, createUser, updateUser, deleteUser } = require('../controllers/usersController');
+const { getUsers, getUserById, createUser, updateUser, deleteUser } = require('../controllers/usersController');
 
 // Kullanıcıları Listele
 router.get('/', getUsers);
+
+// Id'ye bagli kullanıcı listele
+router.get('/:id', getUserById);
 
 // Yeni Kullanıcı Ekle
 router.post('/', createUser);
