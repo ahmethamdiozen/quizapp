@@ -3,9 +3,9 @@ psql -U username -d dbname  // psql'e bağlan. Kullanıcı ve veritabanı aynı 
 
 \c quizapp              // quizapp veritabanına bağlan. psql içindeyken \c kullanılır
 
-\dt                     // veritabanındaki tüm tabloları listele.
+\dt                     // veritabanındaki tüm tabloları listeler.
 
-\l                      // mevcut veritabanlarını listele.
+\l                      // mevcut veritabanlarını listeler.
 
 \du                     // kullanıcıları ve rollerini görüntüler.
 

@@ -11,6 +11,7 @@ const getUsers = async (req, res) => {
   }
 };
 
+// ID'ye göre kullanıcı getir
 const getUserById = async (req, res) => {
   const { id } = req.params;
   try {

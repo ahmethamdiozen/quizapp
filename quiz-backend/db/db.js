@@ -5,11 +5,11 @@ dotenv.config();
 
 // Veritabanı bağlantı bilgileri
 const client = new Client({
-  user: process.env.DB_USER,       // .env dosyasından alıyoruz
-  host: process.env.DB_HOST,       // .env dosyasından alıyoruz
-  database: process.env.DB_NAME,   // .env dosyasından alıyoruz
-  password: process.env.DB_PASSWORD, // .env dosyasından alıyoruz
-  port: process.env.DB_PORT,       // genellikle 5432
+  user: process.env.DB_USER,          // .env dosyasından alıyoruz
+  host: process.env.DB_HOST,          // .env dosyasından alıyoruz
+  database: process.env.DB_NAME,      // .env dosyasından alıyoruz
+  password: process.env.DB_PASSWORD,  // .env dosyasından alıyoruz
+  port: process.env.DB_PORT,          // genellikle 5432
 });
 
 // Veritabanına bağlanıyoruz

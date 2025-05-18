@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "quiz-app-collection",
+		"name": "Quiz App API Tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"testuser\",\n    \"email\": \"test@example.com\",\n    \"password\": \"test123\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/users",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "3000",
+							"path": ["users"]
+						}
+					}
+				},
+				{
+					"name": "Get Users",
+					"request": {
+						"method": "GET",
+						"url": {
+							"raw": "http://localhost:3000/users",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "3000",
+							"path": ["users"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Quizzes",
+			"item": [
+				{
+					"name": "Create Quiz",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Test Quiz\",\n    \"description\": \"This is a test quiz\",\n    \"created_by\": 1\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/quizzes",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "3000",
+							"path": ["quizzes"]
+						}
+					}
+				},
+				{
+					"name": "Get Quizzes",
+					"request": {
+						"method": "GET",
+						"url": {
+							"raw": "http://localhost:3000/quizzes",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "3000",
+							"path": ["quizzes"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Questions",
+			"item": [
+				{
+					"name": "Create Question",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"question_text\": \"What is 2+2?\",\n    \"correct_answer\": \"4\",\n    \"options\": [\"3\", \"5\", \"6\"],\n    \"points\": 1\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/quizzes/1/questions",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "3000",
+							"path": ["quizzes", "1", "questions"]
+						}
+					}
+				},
+				{
+					"name": "Get Questions for Quiz",
+					"request": {
+						"method": "GET",
+						"url": {
+							"raw": "http://localhost:3000/quizzes/1/questions",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "3000",
+							"path": ["quizzes", "1", "questions"]
+						}
+					}
+				}
+			]
+		}
+	]
+} 
