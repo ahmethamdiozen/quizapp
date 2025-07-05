@@ -28,8 +28,8 @@ Uygulama [kahoot-production.up.railway.app](https://kahoot-production.up.railway
 1. **Repository'yi klonlayın:**
 
 ```bash
-git clone https://github.com/kullaniciadi/quiz-uygulamasi.git
-cd quiz-uygulamasi
+git clone https://github.com/ahmethamdiozen/quizapp.git
+cd quizapp
 ```
 
 2. **Bağımlılıkları yükleyin:**
