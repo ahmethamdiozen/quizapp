@@ -2,6 +2,14 @@
 
 Bu proje, öğretmenlerin ve öğrencilerin canlı olarak quiz yapabileceği gerçek zamanlı bir web uygulamasıdır. Uygulama, Node.js, Express, Socket.IO, PostgreSQL ve HTML/CSS/JS kullanılarak geliştirilmiştir.
 
+## Kullanılan Teknolojiler
+
+- Frontend: HTML, CSS, JavaScript (Vanilla)
+- Backend: Node.js, Express.js
+- Gerçek Zamanlı İletişim: Socket.io
+- Veritabanı: PostgreSQL
+- AI API: OpenAI ChatGPT
+
 ## Özellikler
 
 - Gerçek zamanlı katılım ve soru gönderimi (Socket.IO tabanlı)
@@ -9,8 +17,13 @@ Bu proje, öğretmenlerin ve öğrencilerin canlı olarak quiz yapabileceği ger
 - Öğrenci ekranında canlı olarak soru çözme
 - Görsel ve video destekli sorular
 - Saniyeye dayalı puanlama sistemi
+- Yapay zeka destekli quiz oluşturma
 - Sınav sonunda sıralama (leaderboard) gösterimi
 - Quiz oluşturma, listeleme ve düzenleme işlemleri
+
+## Yapay Zeka ile Quiz Oluşturma
+
+Uygulama, OpenAI API'si kullanılarak yapay zeka destekli otomatik quiz oluşturma özelliği sunar. Kullanıcılar bir konu başlığı belirleyerek birkaç saniye içinde bir quiz oluşturabilir. Bu özellik sayesinde öğretmenler zaman kazandıran, özelleştirilebilir içerikler oluşturabilir.
 
 ## Uygulamayı Kullanma
 
@@ -108,7 +121,3 @@ Uygulama `http://localhost:3000` üzerinde çalışacaktır.
 3. Öğretmen olarak quiz başlatın ve öğrencilere oda kodunu paylaşın.
 4. Öğrenciler oyun ekranından katılır, sorular sırayla canlı olarak gönderilir.
 5. Cevaplara göre sıralama belirlenir ve sonuç ekranı gösterilir.
-
-## Lisans
-
-Bu proje MIT lisansı ile sunulmuştur.
