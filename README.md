@@ -1,57 +1,57 @@
-# Canlı Quiz Uygulaması
+# Live Quiz Application
 
-Bu proje, öğretmenlerin ve öğrencilerin canlı olarak quiz yapabileceği gerçek zamanlı bir web uygulamasıdır. Uygulama, Node.js, Express, Socket.IO, PostgreSQL ve HTML/CSS/JS kullanılarak geliştirilmiştir.
+This project is a real-time web application where teachers and students can participate in live quizzes. The application is developed using Node.js, Express, Socket.IO, PostgreSQL, and HTML/CSS/JS.
 
-## Kullanılan Teknolojiler
+## Technologies Used
 
 - Frontend: HTML, CSS, JavaScript (Vanilla)
 - Backend: Node.js, Express.js
-- Gerçek Zamanlı İletişim: Socket.io
-- Veritabanı: PostgreSQL
+- Real-Time Communication: Socket.IO
+- Database: PostgreSQL
 - AI API: OpenAI ChatGPT
 
-## Özellikler
+## Features
 
-- Gerçek zamanlı katılım ve soru gönderimi (Socket.IO tabanlı)
-- Öğretmen paneli üzerinden quiz başlatma ve yönetme
-- Öğrenci ekranında canlı olarak soru çözme
-- Görsel ve video destekli sorular
-- Saniyeye dayalı puanlama sistemi
-- Yapay zeka destekli quiz oluşturma
-- Sınav sonunda sıralama (leaderboard) gösterimi
-- Quiz oluşturma, listeleme ve düzenleme işlemleri
+- Real-time participation and question delivery (Socket.IO-based)
+- Quiz creation and management via teacher panel
+- Live question solving on the student screen
+- Image and video supported questions
+- Time-based scoring system (per second)
+- AI-powered quiz generation
+- Leaderboard display at the end of the quiz
+- Quiz creation, listing, and editing operations
 
-## Yapay Zeka ile Quiz Oluşturma
+## AI-Powered Quiz Generation
 
-Uygulama, OpenAI API'si kullanılarak yapay zeka destekli otomatik quiz oluşturma özelliği sunar. Kullanıcılar bir konu başlığı belirleyerek birkaç saniye içinde bir quiz oluşturabilir. Bu özellik sayesinde öğretmenler zaman kazandıran, özelleştirilebilir içerikler oluşturabilir.
+The application provides an AI-powered automatic quiz generation feature using the OpenAI API. Users can generate a quiz within seconds by specifying a topic. This feature allows teachers to save time by creating customizable content efficiently.
 
-## Uygulamayı Kullanma
+## Using the Application
 
-Uygulama [kahoot-production.up.railway.app](https://kahoot-production.up.railway.app/) adresine deploy edilmiştir. Kullanmak isteyenler bu bağlantıyı kullanarak uygulamaya erişebilir.
+The application is deployed at [kahoot-production.up.railway.app](https://kahoot-production.up.railway.app/). Anyone who wants to use it can access the application via this link.
 
-## Kurulum
+## Installation
 
-### Gereksinimler
+### Requirements
 
 - Node.js (v16+)
 - PostgreSQL
 
-### Adımlar
+### Steps
 
-1. **Repository'yi klonlayın:**
+1. **Clone the repository:**
 
 ```bash
 git clone https://github.com/ahmethamdiozen/quizapp.git
 cd quizapp
 ```
 
-2. **Bağımlılıkları yükleyin:**
+2. **Install dependencies:**
 
 ```bash
 npm install
 ```
 
-3. **Veritabanını hazırlayın:**
+3. **Prepare the database:**
 
 ```sql
 CREATE DATABASE quizapp;
@@ -87,37 +87,37 @@ CREATE TABLE sessions (
 );
 ```
 
-4. **Ortam değişkenlerini oluşturun:**
+4. **Create environment variables::**
 
-`.env` dosyası oluşturun:
+ Create a `.env` file:
 
 ```env
-DATABASE_URL=postgresql://kullanici:sifre@localhost:5432/quizapp
-JWT_SECRET=çokgizlisifre
+DATABASE_URL=postgresql://username:password@localhost:5432/quizapp
+JWT_SECRET=verysecretkey
 ```
 
-5. **Sunucuyu başlatın:**
+5. **Start the server:**
 
 ```bash
 npm start
 ```
 
-Uygulama `http://localhost:3000` üzerinde çalışacaktır.
+The application will run at `http://localhost:3000`
 
-## Klasör Yapısı
+## Folder Structure
 
 ```
-- public/             → Frontend dosyaları (HTML, CSS, JS)
-- routes/             → API route'ları (auth, quiz, vs.)
-- sockets/            → Socket.IO olayları
-- db.js               → Veritabanı bağlantısı
-- server.js           → Express & Socket.IO sunucusu
+- public/             → Frontend files (HTML, CSS, JS)
+- routes/             → API routes (auth, quiz, etc.)
+- sockets/            → Socket.IO events
+- db.js               → Database connection
+- server.js           → Express & Socket.IO server
 ```
 
-## Kullanım
+## Usage
 
-1. Giriş yapın veya kayıt olun.
-2. Quiz oluşturun ya da var olanlardan birini seçin.
-3. Öğretmen olarak quiz başlatın ve öğrencilere oda kodunu paylaşın.
-4. Öğrenciler oyun ekranından katılır, sorular sırayla canlı olarak gönderilir.
-5. Cevaplara göre sıralama belirlenir ve sonuç ekranı gösterilir.
+1. Log in or register.
+2. Create a quiz or select an existing one.
+3. Start the quiz as a teacher and share the room code with students.
+4. Students join via the game screen; questions are sent live in sequence.
+5. Rankings are determined based on answers, and the results screen is displayed.
